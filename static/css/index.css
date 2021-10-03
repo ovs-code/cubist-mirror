@@ -1,0 +1,49 @@
+.container {
+    height: 98vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.column {
+    min-height: 95vh;
+    max-height: 95vh;
+    overflow-y: auto;
+}
+
+.column img {
+    width: 40%;
+}
+
+img.style {
+    border: 5px solid transparent;
+}
+
+img.style.disabled {
+    filter: grayscale(1);
+}
+
+img.style.active {
+    border-color: greenyellow;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.controls > div {
+    display: block;
+    margin: 10px;
+}
+
+select {
+    overflow: hidden;
+
+  }
+
+label {
+    display: block;
+}
