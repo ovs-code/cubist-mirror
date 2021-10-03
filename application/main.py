@@ -55,14 +55,14 @@ def stylize_video(input_path, output_path, fg_style, background:int, scaling, bg
 
     segmentation_model = SegmentationModel()
     height, width = get_video_resolution(input_path)
-    scaled_width = width // scaling
-    scaled_height = height // scaling
+    scaled_width = int(width // scaling)
+    scaled_height = int(height // scaling)
     input_controller = VideoFileInput(input_path, (scaled_width, scaled_height))
     controller = Controller(
         style_models, segmentation_model, input_controller, output_path=output_path)
     updates = [
         (Update.FG_STYLE, fg_style),
-        (Update.BG_STYLE, 'hundertwasser'),
+        (Update.BG_STYLE, bg_style),
         (Update.BACKGROUND, background),
     ]
     controller.start(OutputMode.VIDEO)

@@ -15,8 +15,8 @@ if __name__ == '__main__':
     video_parser = subparsers.add_parser('video', help='Stylize a video file')
     video_parser.add_argument('--fg-style', help='style of the foreground', required=True)
     video_parser.add_argument('--bg-style', help='style of the background')
-    video_parser.add_argument('--background', help='mode of segmentation', choices=[0, 1, 2], default=0)
-    video_parser.add_argument('--scaling', help='downscale the video by a factor', type=int, default=1)
+    video_parser.add_argument('--background', help='mode of segmentation', type=int, default=0)
+    video_parser.add_argument('--scaling', help='downscale the video by a factor', type=float, default=1)
     video_parser.add_argument('infile', help='Video file to stylize')
     video_parser.add_argument('outfile', help='File to write result to')
 
