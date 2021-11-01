@@ -9,9 +9,13 @@ class WebcamInput(Input):
     def __init__(self, cam_id, resolution):
         self.cam_id = cam_id
         self.resolution = resolution
+        
 
     def start(self):
         self.cam = cv2.VideoCapture(self.cam_id, cv2.CAP_DSHOW)
+        # Set camera resolution to FHD to ensure 16:9 aspect ratio
+        self.cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
+        self.cam.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
 
     def get_inputs(self):
         s, img = self.cam.read()
