@@ -11,7 +11,7 @@ pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio===0.9.0 -f h
 pip install numpy opencv-python Pillow pyvirtualcam web.py imageio
 ```
 
-Download and extract assets.zip into the main folder and images.zip into `static/`. These contain the pretrained models.
+Download and extract assets.zip into the main folder and images.zip into `static/`. These contain the pretrained models and can be found in the *Releases section of the repository*
 
 ## Running the application
 
