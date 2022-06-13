@@ -23,6 +23,19 @@ The code can be run with `python run.py <command>`, where command is
 
 Append `-h / --help` to get detailed usage information.
 
+### Use as a virtual webcam
+
+For Windows and macOS OBS can be used to provide a virtual camera:
+
+ - install [OBS](https://obsproject.com/)
+ - launch OBS, click *Start Virtual Camera*, then *Stop Virtual Camera*
+ - close OBS, now the virtual camera can be used
+
+For Linux further instructions are available at the [pyvirtualcam package](https://github.com/letmaik/pyvirtualcam).
+You might need to adjust `CAM_ID` in `application/config.py`.
+
+After setting up the virtual cam, Select *Start Virtual Webcam* at the launch screen to use it.
+
 ## Adding styles
 
 Train new models using script provided here.
